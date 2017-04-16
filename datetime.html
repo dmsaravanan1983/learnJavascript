@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head><title></title></head>
+<body>
+<div>
+  <p>
+    Today is : <span id="day"></span> <br/>
+    Current Time is : <span id="time"></span>
+  </br/>
+  </p>
+</div>
+<script type="text/javascript">
+function call(){
+let curDate = new Date();
+let curTime = curDate.getHours();
+if (curTime >= 12){
+  formatNew = 'PM';
+} else formatNew = 'AM'
+
+curTime = curTime % 12 ;
+
+let curMin = curDate.getMinutes();
+let curSec = curDate.getSeconds();
+document.getElementById('time').innerHTML = curTime + formatNew + ' : ' + curMin + ' : ' + curSec;
+let newDay = curDate.getDay();
+switch (newDay) {
+  case 0:
+    console.log('Its Sunday');
+    document.getElementById('day').innerHTML = " Sunday";
+    break;
+  case 1:
+    console.log('Its Monday');
+    document.getElementById('day').innerHTML = " Monday";
+    break;
+  case 2:
+    console.log('Its Tuesday');
+    document.getElementById('day').innerHTML = " Tuesday";
+    break;
+  case 3:
+    console.log('Its Wednesday');
+    document.getElementById('day').innerHTML = " Wednesday";
+    break;
+  case 4:
+    console.log('Its Thursday');
+    document.getElementById('day').innerHTML = " Thursday";
+    break;
+  case 5:
+    console.log('Its Friday');
+    document.getElementById('day').innerHTML = " Friday";
+    break;
+  case 6:
+    console.log('Its saturday');
+    document.getElementById('day').innerHTML = " Saturday";
+    break;
+  default:
+    console.log('Its day');
+
+}
+}
+call();
+</script>
+</body>
+</html>
