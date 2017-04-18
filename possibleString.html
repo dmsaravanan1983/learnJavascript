@@ -8,13 +8,17 @@
 
   </div>
   <script type="text/javascript">
-
+  newArr = [];
   function calStr(str){
     console.log(str);
-    let strNew = str.split('').reverse().join('');
+    var strNew = [];
+    for(let i,y=1; i<str.length;i++,y++){
+      strNew[i] = str.subString(i,y);
+    }
     console.log(strNew);
+    
   }
-  calStr('212334556789');
+  calStr('checkpossible');
   </script>
 </body>
 </html>
